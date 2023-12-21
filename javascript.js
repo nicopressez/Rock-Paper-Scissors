@@ -1,4 +1,10 @@
-// The computer randomly returns rock paper or scissors //
+// Initialize player and computer score
+
+let playerScore = 0;
+let computerScore = 0;
+
+// The computer randomly decides rock paper or scissors 
+
 function getComputerChoice() {
 min = Math.ceil(0);
 max = Math.floor(2);
@@ -16,7 +22,10 @@ else if (randomNumber == 2)
     return "Scissors"
 }
 };
+
 // Get player choice based on prompt input
+// If player types something else, ask again
+
 function getPlayerChoice() {
     playerInput = prompt("Rock Paper or Scissors?");
     if (playerInput.toLowerCase() == "rock")
@@ -33,31 +42,63 @@ function getPlayerChoice() {
     }
     else 
     {
+    console.log("Choice incorrect, please choose between the 3 options")
     getPlayerChoice();
     }
 }
-playerSelection = getPlayerChoice();
-computerSelection = getComputerChoice();
 
-// Plays a single round of Rock Paper Scissors to determine winner
-// Determine the winner based on computer and player choice (win/tie/lose)
-function playRound (playerSelection, computerSelection) {
+// Plays a single round of Rock Paper Scissors
+// Determine the winner and update player scores
+// Display computer's choice + the result of the round
+
+function playRound () {
+let    playerSelection = getPlayerChoice();
+let    computerSelection = getComputerChoice();
 
 if (playerSelection == "Rock" && computerSelection == "Scissors" || 
     playerSelection == "Paper" && computerSelection == "Rock" ||
     playerSelection== "Scissors" && computerSelection == "Paper")
 {
-    return "You win";
+    console.log ("The computer chose:" + " " + computerSelection)
+    console.log("You win! " + playerSelection + " beats " + computerSelection);
+    return playerScore++;
 }
 else if (playerSelection == computerSelection)
 {
-    return "It's a tie!";
+    console.log ("The computer chose:" + " " + computerSelection)
+    console.log ("It's a tie!");
 }
 else
 {
-    return "You lose";
+    console.log ("The computer chose:" + " " + computerSelection)
+    console.log("Computer wins! " + computerSelection + " beats " + playerSelection );
+    return computerScore++;
 }
 }
 
-console.log (computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+// 5 rounds are played, the computer's and player scores show on console.
+// Todo: Make this part a loop when revamp
+
+function game() {
+    playRound();
+    console.log ("Your current score is: " + playerScore);
+    console.log ("The computer's score is: " + computerScore);
+    playRound();
+    console.log ("Your current score is: " + playerScore);
+    console.log ("The computer's score is: " + computerScore);
+    playRound();
+    console.log ("Your current score is: " + playerScore);
+    console.log ("The computer's score is: " + computerScore);
+    playRound();
+    console.log ("Your current score is: " + playerScore);
+    console.log ("The computer's score is: " + computerScore);
+    playRound();
+    console.log ("Your current score is: " + playerScore);
+    console.log ("The computer's score is: " + computerScore);
+    
+}
+
+game();
+
+
+// Todo: Game stops when a player reaches score "5" 
