@@ -15,12 +15,32 @@ else if (randomNumber == 2)
 {
     return "Scissors"
 }
+};
+console.log(getPlayerChoice());
+// Get player choice based on prompt input
+function getPlayerChoice() {
+    playerInput = prompt("Rock Paper or Scissors?");
+    if (playerInput.toLowerCase() == "rock")
+    {
+    return "Rock";
+    }
+    else if (playerInput.toLowerCase() == "paper")
+    {
+    return "Paper";
+    }
+    else if (playerInput.toLowerCase() == "scissors")
+    {
+    return "Scissors";
+    }
+    else 
+    {
+    getPlayerChoice();
+    }
 }
-console.log(getComputerChoice());
 
-// Plays a single round of Rock Paper Scissors //
+// Plays a single round of Rock Paper Scissors to determine winner
 function playRound (playerSelection, computerSelection) {
     
 }
 
-// Plays until someone reaches 5 points, then winner message //
+// Determine the winner based on computer and player input
