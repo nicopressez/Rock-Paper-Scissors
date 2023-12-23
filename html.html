@@ -3,21 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Rock, Paper, Scissors</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-    <div id="gameArea">
-        <button id="Rockbtn">Rock</button>
-        <button id="Paperbtn">Paper</button>
-        <button id="Scissorsbtn">Scissors</button>
+    <div class="gameTitle">
+        <h1>Rock, Paper, Scissors</h1>
+        <p class="subTitle">first to reach 5 points wins</p>
+    </div>
+    <div id="gameArea" class="gameArea">
+     <div class="playButtons">
+        <button class="playButton" id="Rockbtn"><img src="./images/rock-image.png" alt="rock"></button>
+        <button class="playButton" id="Paperbtn"><img src="./images/paper-image.png" alt="paper"></button>
+        <button class="playButton"  id="Scissorsbtn"><img src="./images/scissors-image.png" alt="scissors"></button>
+     </div>
         <p id="roundResult"></p>
-        <p id="score">Current score:
-            You: <span id="playerScore"></span>
-            Computer: <span id="computerScore"></span>
-        </p>
+        <p id="score">Current score:</p>
+            <div class="score player">You: <span id="playerScore"></span></div>
+            <div class="score computer">Computer: <span id="computerScore"></span></div>
+        
         <p id="gameResult"></p>
     </div>
 

@@ -1,0 +1,68 @@
+html
+{
+    color: #00fa66;
+    background-color: #282f4b;
+    text-align: center;
+    font-size: 30px;
+    font-family: Gill Sans, sans-serif;
+    font-weight: bold;
+}
+
+.playButtons
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img
+{
+    height: 300px;
+}
+
+.playButton
+{
+    border-radius: 5%;
+    background-color: #a5a0ba;
+}
+
+h1
+{
+    margin-bottom: 0px;
+}
+
+.subTitle
+{
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.gameTitle
+{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gameResult
+{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+#score
+{
+    margin-bottom: 10px;
+}
+button:not(.playButton)
+{
+  border: 0px;
+  height: 50px;
+  width: 150px;
+  border-radius: 5%;
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #a5a0ba;
+  color: #00fa66;
+}
